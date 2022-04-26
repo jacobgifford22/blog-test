@@ -26,7 +26,9 @@ class User extends Authenticatable
     //     'password',
     // ];
 
-    protected $guarded = [];
+    // protected $guarded = [];
+
+    // Or, you can use AppServiceProvider.php to set this for all models.
 
     /**
      * The attributes that should be hidden for serialization.
