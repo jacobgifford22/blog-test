@@ -11,6 +11,7 @@
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "mailchimp/marketing": "^3.0",
         "spatie/yaml-front-matter": "^2.0"
     },
     "require-dev": {
@@ -36,7 +37,9 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "cp ./vendor/mailchimp/marketing/lib/Configuration.php ./vendor/mailchimp/marketing/lib/ApiClient.php"
+
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
